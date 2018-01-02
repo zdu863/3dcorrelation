@@ -38,7 +38,7 @@ int main(int argc,char **argv)
   ccl_configuration config = default_config;
   ccl_parameters params = ccl_parameters_create(OC, OB, OK, NREL, NMAS, MNU, 
                                                 W0, WA, HH, NORMPS, NS,
-						0, NULL, NULL, &status);
+						14.079181246047625, 0.5, 55, 0, NULL, NULL, &status);
   ccl_cosmology *cosmo = ccl_cosmology_create(params,config);
 
   // Create example number density and bias for tracer
@@ -72,7 +72,7 @@ int main(int argc,char **argv)
   int ntheta = 15;
   theta = ccl_log_spacing(0.01, 5., ntheta); // New array with log spacing
   clustering_corr = malloc(ntheta*sizeof(double));
-  
+
   // Calculate correlation function from angular power spectrum
   ccl_correlation(cosmo, ELL_MAX_CL, larr, clarr, 
                   ntheta, theta, clustering_corr, 
@@ -88,7 +88,7 @@ int main(int argc,char **argv)
   ccl_cosmology_free(cosmo);
   free(clustering_corr);
   free(larr);
-  free(clarr);
+  free(clarr); 
 
   return 0;
 }

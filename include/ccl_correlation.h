@@ -41,6 +41,12 @@ void ccl_correlation(ccl_cosmology *cosmo,
 		     int corr_type,int do_taper_cl,double *taper_cl_limits,int flag_method,
 		     int *status);
 
+void ccl_correlation3d(ccl_cosmology *cosmo,
+		     int n_k,double *k,double *pk,
+		     int n_r,double *r,double *xi,
+		     int do_taper_pk,double *taper_pk_limits,
+		     int *status);
+
 #ifdef __cplusplus
 }
 #endif

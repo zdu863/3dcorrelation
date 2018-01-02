@@ -1,0 +1,98 @@
+if ! [ -e /home/zdu/Documents/CCL_new/CCL/class/build ]; then mkdir /home/zdu/Documents/CCL_new/CCL/class/build ; mkdir /home/zdu/Documents/CCL_new/CCL/class/build/lib; fi;
+touch build/.base
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/growTable.c -o growTable.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/dei_rkck.c -o dei_rkck.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/sparse.c -o sparse.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/evolver_rkck.c -o evolver_rkck.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/evolver_ndf15.c -o evolver_ndf15.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/arrays.c -o arrays.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/parser.c -o parser.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/quadrature.c -o quadrature.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/hyperspherical.c -o hyperspherical.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../tools/common.c -o common.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/input.c -o input.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/background.c -o background.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/thermodynamics.c -o thermodynamics.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/perturbations.c -o perturbations.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/primordial.c -o primordial.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/nonlinear.c -o nonlinear.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/transfer.c -o transfer.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/spectra.c -o spectra.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../source/lensing.c -o lensing.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../hyrec/hyrectools.c -o hyrectools.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../hyrec/helium.c -o helium.o
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../hyrec/hydrogen.c -o hydrogen.o
+../hyrec/hydrogen.c: In function ‘read_rates’:
+../hyrec/hydrogen.c:110:12: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+            fscanf(fA, "%le", &(rate_table->logAlpha_tab[l][j][i]));
+            ^
+../hyrec/hydrogen.c:115:7: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fR, "%le", &(rate_table->logR2p2s_tab[i]));
+       ^
+../hyrec/hydrogen.c: In function ‘read_twog_params’:
+../hyrec/hydrogen.c:270:7: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fA, "%le", &(twog->Eb_tab[b]));
+       ^
+../hyrec/hydrogen.c:271:7: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fA, "%le", &(twog->A1s_tab[b]));
+       ^
+../hyrec/hydrogen.c:272:7: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fA, "%le", &(twog->A2s_tab[b]));
+       ^
+../hyrec/hydrogen.c:273:7: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fA, "%le", &(twog->A3s3d_tab[b]));
+       ^
+../hyrec/hydrogen.c:274:7: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+       fscanf(fA, "%le", &(twog->A4s4d_tab[b]));
+       ^
+cd /home/zdu/Documents/CCL_new/CCL/class/build;gcc -O4 -ffast-math   -g -fPIC -D__CLASSDIR__='"/home/zdu/Documents/CCL_new/CCL/class"' -DHYREC -I../include -I../hyrec -c ../hyrec/history.c -o history.o
+../hyrec/history.c: In function ‘rec_get_cosmoparam’:
+../hyrec/history.c:32:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(fin, "%lg", &(param->T0));
+   ^
+../hyrec/history.c:34:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(fin, "%lg", &(param->obh2));
+   ^
+../hyrec/history.c:36:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(fin, "%lg", &(param->omh2));
+   ^
+../hyrec/history.c:38:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(fin, "%lg", &(param->okh2));
+   ^
+../hyrec/history.c:40:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(fin, "%lg", &(param->odeh2));
+   ^
+../hyrec/history.c:42:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(fin, "%lg %lg", &(param->w0), &(param->wa));
+   ^
+../hyrec/history.c:44:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(fin, "%lg", &(param->Y));
+   ^
+../hyrec/history.c:46:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(fin, "%lg", &(param->Nnueff));
+   ^
+ar rv  libclass.a build/growTable.o build/dei_rkck.o build/sparse.o build/evolver_rkck.o build/evolver_ndf15.o build/arrays.o build/parser.o build/quadrature.o build/hyperspherical.o build/common.o build/input.o build/background.o build/thermodynamics.o build/perturbations.o build/primordial.o build/nonlinear.o build/transfer.o build/spectra.o build/lensing.o build/hyrectools.o build/helium.o build/hydrogen.o build/history.o
+ar: creating libclass.a
+a - build/growTable.o
+a - build/dei_rkck.o
+a - build/sparse.o
+a - build/evolver_rkck.o
+a - build/evolver_ndf15.o
+a - build/arrays.o
+a - build/parser.o
+a - build/quadrature.o
+a - build/hyperspherical.o
+a - build/common.o
+a - build/input.o
+a - build/background.o
+a - build/thermodynamics.o
+a - build/perturbations.o
+a - build/primordial.o
+a - build/nonlinear.o
+a - build/transfer.o
+a - build/spectra.o
+a - build/lensing.o
+a - build/hyrectools.o
+a - build/helium.o
+a - build/hydrogen.o
+a - build/history.o
